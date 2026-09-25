@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    top:95px;
+    left:120px;
+    border: 2px solid greenyellow;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px greenyellow;
+    }
+    .container>label{
+        position: relative;
+        top:3px;
+        left: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: medium;
+
+    }
+    .container>input{
+        position: relative;
+        top:5px;
+        left:18px;
+        border-radius: 5px;
+        border: 2px solid greenyellow;
+
+    }
+    .container>button{
+        position: relative;
+        top:20px;
+        left:28px;
+        border-radius: 5px;
+        background-color: greenyellow;
+        color: whitesmoke;
+    }
+    #one{
+        position: relative;
+        top:40px;
+        left: 28px;
+    }
+    .container_two{
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    top:95px;
+    left:420px;
+    border: 2px solid rgb(244, 89, 89);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px red;
+    }
+    .container_two>label{
+        position: relative;
+        top:3px;
+        left: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: medium;
+    }
+    .container_two>input{
+        position: relative;
+        top:5px;
+        left:18px;
+        border-radius: 5px;
+        border:2px solid rgb(244, 89, 89);
+
+    }
+    .container_two>button{
+        position: relative;
+        top:36px;
+        left:30px;
+        border-radius: 5px;
+        background-color: rgb(244, 89, 89);
+        color: whitesmoke;
+    }
+    #two{
+        position: relative;
+        top:40px;
+        left: 28px;
+    }
+    .container_three{
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    top:95px;
+    left:780px;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px yellow ;
+    }
+    .container_three>label{
+        position: relative;
+        top:3px;
+        left: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: medium;
+    }
+    .container_three>input{
+        position: relative;
+        top:5px;
+        left:18px;
+        border-radius: 5px;
+        border: 2px solid yellow;
+
+    }
+    .container_three>button{
+        position: relative;
+        top:36px;
+        left:38px;
+        border-radius: 5px;
+        background-color: yellow;
+        color: rgb(177, 173, 167);
+
+    }
+    .container>input:hover{
+        border: 2px solid greenyellow;
+        box-shadow: 0px 0px 10px greenyellow;
+        transform: scale(1.1);
+    }
+    .container>button:hover{
+        transform: scale(1.2);
+    }
+    .container_two>input:hover{
+        border: 2px solid red;
+        box-shadow: 0px 0px 10px red;
+        transform: scale(1.1);
+    }
+    .container_two>button:hover{
+        transform: scale(1.2);
+    }
+    .container_three>input:hover{
+        border: 2px solid yellow;
+        box-shadow: 0px 0px 10px yellow;
+        transform: scale(1.1);
+    }
+    .container_three>button:hover{
+        transform: scale(1.2);
+    }
+
+
+</style>
+<body><div class="container">
+    <label>Enter ur distance</label>
+    <input type="text" id="dis" placeholder="Enter ur distance in cm">
+    <br><br>
+    <button onclick="convert_one()">Convert into meters</button>
+    <div id="one"></div>
+    </div>
+    <div class="container_two">
+    <label>Enter ur distance</label>
+    <input type="text" id="dist" placeholder="Enter ur distance in cm">
+    <button onclick="convert_two()">Convert into inches</button>
+    <div id="two"></div>
+    </div>
+    <div class="container_three">
+    <label>Enter ur distance</label>
+    <input type="text" id="dista" placeholder="Enter ur distance in cm">
+    <button onclick="convert_three()">Convert into feet</button>
+    <div id="three"></div>
+</div>
+    <script>
+    function convert_one() {
+        var dis = document.getElementById("dis").value;
+        var meter = dis / 100;
+        document.getElementById("one").innerText="Distance in meter: "+meter;
+    }
+    function convert_two(){
+        var dis = document.getElementById("dist").value;
+        var inches = dis / 39.37;
+        document.getElementById("two").innerText="Distance in inches: "+inches;
+    }
+    function convert_three(){
+        var dis = document.getElementById("dis").value;
+        var feet = dis / 3.28;
+        document.write("Distance in feet: " + feet);
+    }
+    </script>
+</body>
+</html>
